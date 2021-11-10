@@ -9,9 +9,6 @@ As someone who loves the sport, I wanted to create a project that focuses on cre
 ## Testing
 Unit tests will be written to validate user inputs as well as check internal logic of the application. The current unit test checks the passwords to make sure strong passwords are enforced. Future tests will focus on evaluating each data layer. 
 
-## Screenshot 
-![sample image](img/sample.png)
-
 ## Development Strategy
 Working individually on this project, I decided to use an agile development strategy to help me set up the proposal webpage. 
 
