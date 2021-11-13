@@ -21,7 +21,7 @@ Visual Studio Code, Chrome DevTools, GitHub
 ## Website
 [FootWiz Proposal Webpage](https://uic-cs484.github.io/assignment-1---team-project-proposal-nchawl2/proposal.html)
 
-## Author
+## Developer
 Neil Chawla  
 NetID: nchawl2  
 Team 20  
