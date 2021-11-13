@@ -7,7 +7,7 @@ FootWiz is a comprehensive dashboard containing all the latest information and s
 As someone who loves the sport, I wanted to create a project that focuses on creating an interactive dashboard with all the information about the leagues and teams I would like as a user. My main aim is to provide information in a concise manner, but also allow the user to dive in and get more detailed information if they would like.
 
 ## Entity Relationship Diagram
-(https://replit.com/@neilchawla/footwiz/ERD.pdf)
+![ERD Diagram](https://github.com/UIC-CS484/assignment-2---final-project-repository-nchawl2/blob/master/ERD.png)
 
 ## Testing
 Unit tests will be written to validate user inputs as well as check internal logic of the application. The current unit test checks the passwords to make sure strong passwords are enforced. Future tests will focus on evaluating each data layer. 
