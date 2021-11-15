@@ -4,6 +4,8 @@ var fs = require('fs');
 var passwordValidator = require('password-validator');
 var databaseFunction = require('../database_functions.js');
 
+const bcrypt = require('bcryptjs');
+
 function strongPassword(password) {
     var schema = new passwordValidator();
     schema
@@ -22,7 +24,7 @@ function strongPassword(password) {
 }
 
 /* GET home page. */
-router.post('/', function(req, res, next) {
+router.post('/', async function(req, res, next) {
     
     var first_name = req.body.first_name;
     var last_name = req.body.last_name;
@@ -36,18 +38,22 @@ router.post('/', function(req, res, next) {
     else{
         console.log("first_name: " + first_name + "last_name: " + last_name + " Email: " + email + " Password: " + password);
 
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        console.log("Hashed Password: " + hashedPassword);
+
         'use strict';
-            var randomValue = Math.random() * 123;
+        var randomValue = Math.random() * 123;
         let users = [{ 
             id: randomValue,
             first_name: first_name,
             last_name: last_name, 
             email: email,
-            password: password
+            // password: password
+            password: hashedPassword
         }];
 
-        databaseFunction.createUser(users[0].id, users[0].email, users[0].password);
-        
+        // databaseFunction.createUser(users[0].id, users[0].email, users[0].password);
+        databaseFunction.createUser(users[0].id, users[0].email, users[0].password);        
         let data = JSON.stringify(users);
         fs.writeFileSync('users.json', data);
 
