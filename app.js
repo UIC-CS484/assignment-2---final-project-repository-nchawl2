@@ -16,7 +16,7 @@ var dashboardRouter = require('./routes/dashboard');
 var invalidLoginRouter = require('./routes/invalidLogin');
 
 var app = express();
-// var SQLiteStore = require('connect-sqlite3')(session);
+var SQLiteStore = require('connect-sqlite3')(session);
 
 require('./config/passport')(passport);
 
@@ -25,7 +25,9 @@ var session_config = {
   resave: true,
   saveUninitialized: true,
   cookie: { secure: true },
-  // store: new SQLiteStore
+  store: new SQLiteStore({
+    db: './database/task.sqlite'
+  })
   // store parameter when saving session to database
 };
 session_config.cookie.secure = false;
