@@ -34,38 +34,54 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>League Standings</h2>
+							<h2>Select the league below</h2>
+							<p></p>
 						</header>
-						<section class="wrapper style5">
+
+            <section class="wrapper style5">
 							<div class="inner">
+
                 <section>
-                  <h4>Season: {{season}}</h4>
-                  <p></p>
-
-                  <section>
-                    <div id="wg-api-football-standings"
-                          data-host="v3.football.api-sports.io"
-                          data-league={{league}}
-                          data-team=""
-                          data-season={{season}}
-                          data-key="918f77748056929b5e2a60ceb6f4ad4e"
-                          data-theme="grey"
-                          data-show-errors="false"
-                          class="api_football_loader"></div>
-                      <script
-                          type="module"
-                          src="https://widgets.api-sports.io/football/1.1.8/widget.js">
-                      </script>
+                  <p>Select both options below.</p>
+                  <form method="post" action="/result">
+                  
+                  <div class="row gtr-uniform">
+                    <div class="col-6 col-12-xsmall"> <!-- changed from col-12 -->
+												<select name="selected_league" id="selected_league">
+													<option value="-1">- League -</option>
+													<option value="39">Premier League</option>
+													<option value="140">LaLiga Santander</option>
+													<option value="78">Bundesliga</option>
+													<option value="135">Serie A</option>
+                          <option value="61">Ligue 1 UberEats</option>                   
+												</select>
+                    </div>
                     
-                  </section>
+                    <div class="col-6 col-12-xsmall">
+                        <select name="selected_season" id="selected_season">
+													<option value="-1">- Season -</option>
+													<option value="2020">2020</option>
+													<option value="2019">2019</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>           
+												</select>
+                    </div>
+                   
+                    <div class="col-12">
+                        <ul class="actions">
+                          <li><button class="button primary">Get Standings</button></li>
+                        </ul>
+                    </div>
+                  </div>
+                  </form>
 								</section>
+                
+						
 							</div>
-
-              
 						</section>
-
-            
-					</article>
+					</article> 
 
 				<!-- Footer -->
 					<footer id="footer">

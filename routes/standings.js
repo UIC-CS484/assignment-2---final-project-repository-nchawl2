@@ -37,8 +37,13 @@ router.post('/', (req, res, next) => {
 
   let league = req.body.selected_league;
   let season = req.body.selected_season;
-  
-  res.render('result', { league: league, season : season });
+
+  if(league == "-1" || season == "-1") {
+    console.log("select both");
+    res.render('resultError');
+  }
+  else 
+    res.render('result', { league: league, season : season });
 });
 
 module.exports = router;
