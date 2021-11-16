@@ -23,7 +23,7 @@
 											<li><a href="/">Home</a></li>
 											<li><a href="/createAccount">Sign Up</a></li>
                       <li><a href="/login">Login</a></li>
-											
+                      <li><a href="/leagues">Leagues</a></li>
 										</ul>
 									</div>
 								</li>
@@ -34,43 +34,71 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Sign Up</h2>
-							<p>Enter your information in the form below to sign up</p>
+							<h2>Select the league below</h2>
+							<p></p>
 						</header>
-						<section class="wrapper style5">
+
+            <!--
+            <section>
+              <form method="post" action="/leaguePage">
+                <div class="row gtr-uniform">
+                  <select name="selected_league" id="selected_league">
+													<option value="">- League -</option>
+													<option value="1">Premier League</option>
+													<option value="2">LaLiga Santander</option>
+													<option value="3">Bundesliga</option>
+													<option value="4">Serie A</option>
+                          <option value="5">Ligue 1 UberEats</option>                   
+									</select>
+
+                  <ul class="actions">
+                    <li><button class="buttom primary">Get Standings</button></li>
+                  </ul>
+                </div>
+              </form>
+            </section>
+            -->
+
+
+						
+            <section class="wrapper style5">
 							<div class="inner">
 
-            <section>
-              <form method="post" action="/submit">
+                <section>
+                  <form method="post" action="/result">
+                  <!--
                   <div class="row gtr-uniform">
                     <div class="col-6 col-12-xsmall">
                         <input type="text" name="first_name" id="first_name" value="" placeholder="First Name" />
                     </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="text" name="last_name" id="last_name" value="" placeholder="Last Name" />
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="email" name="email" id="email" value="" placeholder="Email" />
-                    </div>
-                    <div class="col-6 col-12-xsmall">
-                        <input type="password" name="password" id="password" value="" placeholder="Password" />
-                    </div>
-                    <div class="col-6 col-12-small">
-                        <input type="checkbox" id="termsConditions" name="termsConditions" unchecked>
-                        <label for="termsConditions">Agree to terms and conditions</label>
-                    </div>
+                    -->
+
+                  
+                  <div class="row gtr-uniform">
+                    <div class="col-12">
+												<select name="selected_league" id="selected_league">
+													<option value="">- League -</option>
+													<option value="Premier League">Premier League</option>
+													<option value="LaLiga Santander">LaLiga Santander</option>
+													<option value="Bundesliga">Bundesliga</option>
+													<option value="Serie A">Serie A</option>
+                          <option value="Ligue 1 UberEats">Ligue 1 UberEats</option>                   
+												</select>
+									 </div> 
+                   
                     <div class="col-12">
                         <ul class="actions">
-                          <li><button class="button primary">Sign Up</button></li>
+                          <li><button class="button primary">Get Standings</button></li>
                         </ul>
                     </div>
                   </div>
-              </form>
-          </section>
-
+                  </form>
+								</section>
+                
+						
 							</div>
 						</section>
-					</article>
+					</article> 
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -99,4 +127,3 @@
 
 	</body>
 </html>
-
