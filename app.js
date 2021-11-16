@@ -17,6 +17,7 @@ var invalidLoginRouter = require('./routes/invalidLogin');
 var leaguesRouter = require('./routes/leagues');
 var standingsRouter = require('./routes/standings');
 var resultErrorRouter = require('./routes/resError');
+var livescoreRouter = require('./routes/score');
 
 var app = express();
 var SQLiteStore = require('connect-sqlite3')(session);
@@ -61,6 +62,7 @@ app.use('/invalidLogin', invalidLoginRouter);
 app.use('/leagues', leaguesRouter);
 app.use('/result', standingsRouter);
 app.use('/resultError', resultErrorRouter);
+app.use('/livescore', livescoreRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
