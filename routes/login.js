@@ -3,9 +3,9 @@ var router = express.Router();
 const axios = require('axios');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-    res.render('login');
-});
+// router.get('/', function(req, res, next) {
+//     res.render('login');
+// });
 
 // WORKING CHUCK NORRIS
 // router.get('/', function(req, res, next) {
@@ -39,34 +39,34 @@ router.get('/', function(req, res, next) {
 // var url = 'https://v3.football.api-sports.io/standings';
 
 
-// var config = {
-//   method: 'GET',
-//   qs: {league: '39', season: '2019'},  
-//   // qs: {id: '33'},
-//   headers: {
-//     'x-rapidapi-host': 'v3.football.api-sports.io',
-//     'x-rapidapi-key': '918f77748056929b5e2a60ceb6f4ad4e'
-//   }
-// };
+var config = {
+  method: 'GET',
+  qs: {league: '39', season: '2019'},  
+  // qs: {id: '33'},
+  headers: {
+    'x-rapidapi-host': 'v3.football.api-sports.io',
+    'x-rapidapi-key': '918f77748056929b5e2a60ceb6f4ad4e'
+  }
+};
 
 // // var url = 'https://v3.football.api-sports.io/standings?'+config.qs.league+'&'+config.qs.season;
-// var url = 'https://v3.football.api-sports.io/standings?league=39&season=2019';
+var url = 'https://v3.football.api-sports.io/standings?league=39&season=2019';
 
-// router.get('/', function(req, res, next) {
-//   // axios.get('https://v3.football.api-sports.io/teams')
-//   axios.get(url, config)
-//     .then(function(response) {
-//       console.log(response.data.response);
-//       console.log(response.data.respone.standings[0]);
-//       res.render('login');
-//     })
-//     .catch(function(error) {
-//       console.log(error);
-//     })
-//     .then(function() {
+router.get('/', function(req, res, next) {
+  // axios.get('https://v3.football.api-sports.io/teams')
+  axios.get(url, config)
+    .then(function(response) {
+      console.log(response.data.response);
+      console.log(response.data.respone.standings[0]);
+      res.render('login');
+    })
+    .catch(function(error) {
+      console.log(error);
+    })
+    .then(function() {
 
-//     });
-// })
+    });
+})
 
 
 

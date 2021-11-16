@@ -38,53 +38,35 @@
 							<p></p>
 						</header>
 
-            <!--
-            <section>
-              <form method="post" action="/leaguePage">
-                <div class="row gtr-uniform">
-                  <select name="selected_league" id="selected_league">
-													<option value="">- League -</option>
-													<option value="1">Premier League</option>
-													<option value="2">LaLiga Santander</option>
-													<option value="3">Bundesliga</option>
-													<option value="4">Serie A</option>
-                          <option value="5">Ligue 1 UberEats</option>                   
-									</select>
-
-                  <ul class="actions">
-                    <li><button class="buttom primary">Get Standings</button></li>
-                  </ul>
-                </div>
-              </form>
-            </section>
-            -->
-
-
-						
             <section class="wrapper style5">
 							<div class="inner">
 
                 <section>
                   <form method="post" action="/result">
-                  <!--
-                  <div class="row gtr-uniform">
-                    <div class="col-6 col-12-xsmall">
-                        <input type="text" name="first_name" id="first_name" value="" placeholder="First Name" />
-                    </div>
-                    -->
-
                   
                   <div class="row gtr-uniform">
-                    <div class="col-12">
+                    <div class="col-6 col-12-xsmall"> <!-- changed from col-12 -->
 												<select name="selected_league" id="selected_league">
 													<option value="">- League -</option>
-													<option value="Premier League">Premier League</option>
-													<option value="LaLiga Santander">LaLiga Santander</option>
-													<option value="Bundesliga">Bundesliga</option>
-													<option value="Serie A">Serie A</option>
-                          <option value="Ligue 1 UberEats">Ligue 1 UberEats</option>                   
+													<option value="39">Premier League</option>
+													<option value="140">LaLiga Santander</option>
+													<option value="78">Bundesliga</option>
+													<option value="135">Serie A</option>
+                          <option value="61">Ligue 1 UberEats</option>                   
 												</select>
-									 </div> 
+                    </div>
+                    
+                    <div class="col-6 col-12-xsmall">
+                        <select name="selected_season" id="selected_season">
+													<option value="">- Season -</option>
+													<option value="2020">2020</option>
+													<option value="2019">2019</option>
+                          <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>           
+												</select>
+                    </div>
                    
                     <div class="col-12">
                         <ul class="actions">

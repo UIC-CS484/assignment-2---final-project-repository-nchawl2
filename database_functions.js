@@ -49,17 +49,4 @@ let authenticateUser = (username, password, done) =>{
 	  });
 }
 
-let getAllUsers = (done) => {
-  var getUsers = 'SELECT * FROM USERS';
-
-  db.get(getUsers, function(err, users) {
-    console.log(users);
-    if(!users) {
-      return done(null, false);
-    }
-
-    return done(null, users);
-  });
-}
-
-module.exports = {db, createUser, authenticateUser, getAllUsers};
+module.exports = {db, createUser, authenticateUser};
