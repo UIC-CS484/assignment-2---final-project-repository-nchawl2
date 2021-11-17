@@ -62,4 +62,16 @@ let addFavLeague = (leagueID, leagueName, userID) => {
   });
 }
 
+let getFavLeagues = (userID) => {
+  var getLeagues = 'SELECT * FROM favoriteLeagues WHERE leagueUserID = ?';
+  var params = [userID];
+
+  db.run(getLeagues, params, function(err) {
+    if(err)
+      return console.log(err.message);
+
+    console.log("Favorite leagues retrieved successfully");
+  })
+}
+
 module.exports = {db, createUser, authenticateUser, addFavLeague};
