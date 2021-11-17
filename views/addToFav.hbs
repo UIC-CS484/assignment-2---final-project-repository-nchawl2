@@ -40,36 +40,10 @@
 						<section class="wrapper style5">
 							<div class="inner">
                 <section>
-                  <h4>Season: {{season}}</h4>
-
-                  <form method="post" action="/addToFav">
-                    <input type="hidden" name="season" id="season" value={{season}} />
-                    <input type="hidden" name="league" id="league" value={{league}} />
-                    <div class="col-12">
-                        <ul class="actions">
-                          <li><button class="button primary">Favorite<i class="fa fa-heart"></i></button></li>
-                        </ul>
-                    </div>
-                  </form>
-                  
+                  <h4>{{league}} Added to your favorites!</h4>
+                  <p></p>
                   <p></p>
 
-                  <section>
-                    <div id="wg-api-football-standings"
-                          data-host="v3.football.api-sports.io"
-                          data-league={{league}}
-                          data-team=""
-                          data-season={{season}}
-                          data-key="918f77748056929b5e2a60ceb6f4ad4e"
-                          data-theme="grey"
-                          data-show-errors="false"
-                          class="api_football_loader"></div>
-                      <script
-                          type="module"
-                          src="https://widgets.api-sports.io/football/1.1.8/widget.js">
-                      </script>
-                    
-                  </section>
                   <div class="col-4 col-12-small">
 												<input type="radio" id="demo-priority-low" name="demo-priority" unchecked>
 												<label for="demo-priority-low">Light Mode - implement functionality</label>
