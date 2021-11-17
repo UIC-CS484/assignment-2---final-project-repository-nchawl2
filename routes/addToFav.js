@@ -9,6 +9,8 @@ router.post('/', async function(req, res, next) {
   var league = functions.leagueIDToName(leagueID);
   console.log(league);
 
+  databaseFunction.addFavLeague(leagueID, league, 6);
+
   res.render('addToFav', { league : league });
 })
 

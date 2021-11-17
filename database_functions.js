@@ -49,4 +49,17 @@ let authenticateUser = (username, password, done) =>{
 	  });
 }
 
-module.exports = {db, createUser, authenticateUser};
+let addFavLeague = (leagueID, leagueName, userID) => {
+  var addLeague = 'INSERT INTO favoriteLeagues (leagueID, leagueName, leagueUserID) VALUES (?, ?, ?)';
+  var params = [leagueID, leagueName, userID];
+
+  db.run(addLeague, params, function(err) {
+    if(err)
+      return console.log(err.message);
+
+    console.log("League Added");
+    console.log(`Rows inserted ${this.changes}`);
+  });
+}
+
+module.exports = {db, createUser, authenticateUser, addFavLeague};
