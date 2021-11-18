@@ -42,7 +42,7 @@ router.post('/', async function(req, res, next) {
         console.log("Hashed Password: " + hashedPassword);
 
         'use strict';
-        var randomValue = Math.random() * 123;
+        var randomValue = Math.floor(Math.random() * 123); // added math.floor
         let users = [{ 
             id: randomValue,
             first_name: first_name,
