@@ -76,4 +76,15 @@ let getFavLeagues = (userID) => {
   })
 }
 
-module.exports = {db, createUser, authenticateUser, addFavLeague};
+let deleteAccount = (userID) => {
+  var deleteAcc = 'DELETE FROM USER WHERE user_id = ?';
+
+  db.run(deleteAcc, userID, function(err) {
+    if(err)
+      return console.log(err.message);
+
+    console.log("User deleted successfully");
+  })
+}
+
+module.exports = {db, createUser, authenticateUser, addFavLeague, deleteAccount};

@@ -61,7 +61,7 @@
                           data-team=""
                           data-season={{season}}
                           data-key="918f77748056929b5e2a60ceb6f4ad4e"
-                          data-theme="light"
+                          data-theme="dark"
                           data-show-errors="false"
                           class="api_football_loader"></div>
                       <script
@@ -70,23 +70,14 @@
                       </script>
                     
                   </section>
-                  <form method="post" action="/resultDark">
-                    <input type="hidden" name="season" id="season" value={{season}} />
-                    <input type="hidden" name="league" id="league" value={{league}} />
+                  <form method="post" action="/result">
+                    <input type="hidden" name="selected_season" id="selected_season" value={{season}} />
+                    <input type="hidden" name="selected_league" id="selected_league" value={{league}} />
                     <div class="col-12">
                         <ul class="actions">
-                          <li><button class="button primary">Dark Mode</button></li>
+                          <li><button>Light Mode</button></li>
                         </ul>
                     </div>
-                    {{!-- <div class="col-4 col-12-small">
-                          <input type="radio" value="0" id="demo-priority-low" name="demo-priority" unchecked />
-                          <label for="demo-priority-low">Light Mode</label>
-                    </div> --}}
-
-                    {{!-- <div class="col-4 col-12-small">
-                          <input type="radio" value="1" id="demo-priority-low" name="demo-priority" unchecked>
-                          <label for="demo-priority-low">Dark Mode</label>
-                    </div> --}}
                   </form>
 								</section>
 							</div>
