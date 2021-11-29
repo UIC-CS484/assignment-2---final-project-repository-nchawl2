@@ -9,6 +9,9 @@ As someone who loves the sport, I wanted to create a project that focuses on cre
 ## Entity Relationship Diagram
 ![ERD Diagram](https://github.com/UIC-CS484/assignment-2---final-project-repository-nchawl2/blob/master/ERD.png)
 
+## Front-End Data Manipulation
+In this project, the front-end charts and visualizations are implemented through the pre-existing widgets provided by the API that is used in the project. The widgets are used to visualize league tables and will be used to display additional information requested by the user in the future.
+
 ## Testing
 Unit tests will be written to validate user inputs as well as check internal logic of the application. The current unit test checks the passwords to make sure strong passwords are enforced. Future tests will focus on evaluating each data layer. 
 
