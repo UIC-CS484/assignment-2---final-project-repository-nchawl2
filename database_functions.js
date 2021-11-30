@@ -1,4 +1,5 @@
 var sqlite3 = require('sqlite3').verbose();
+const passport = require('passport');
 //const bcrypt = require('bcryptjs');
 
 //Creating a new database instance - Indication of connected database
@@ -39,12 +40,13 @@ let authenticateUser = (username, password, done) =>{
 		if (!user) {
 		  return done(null, false);
 		}
-		bcrypt.compare(password, user.prof_password, function (err, result) {
+		bcrypt.compare(password, user.user_password, function (err, result) {
 		  if (err) {
 			return console.log(err.message);
 		  }
 		  if (result) {
-			return done(null, user);
+			//return done(null, user.first_name + ' ' + user.last_name + ' ' + user.email)
+      return done(null, user);
 		  }
 		});
   
