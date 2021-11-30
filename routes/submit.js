@@ -53,7 +53,7 @@ router.post('/', async function(req, res, next) {
         }];
 
         // databaseFunction.createUser(users[0].id, users[0].email, users[0].password);
-        databaseFunction.createUser(users[0].id, users[0].email, users[0].password);        
+        databaseFunction.createUser(users[0].id, users[0].email, users[0].first_name, users[0].last_name, users[0].password);        
         let data = JSON.stringify(users);
         fs.writeFileSync('users.json', data);
 

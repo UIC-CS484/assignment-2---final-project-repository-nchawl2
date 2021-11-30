@@ -16,10 +16,10 @@ let db = new sqlite3.Database('./database/task.sqlite', (err) => {
 });
 
 //Create a User
-let createUser = (id, email, password) => {
-	var createUserSql ='INSERT INTO USER (user_id, user_email,user_password) VALUES (?,?,?)';
+let createUser = (id, email, firstName, lastName, password) => {
+	var createUserSql ='INSERT INTO USER (user_id, user_email, first_name, last_name, user_password) VALUES (?,?,?,?,?)';
 	// var params =[null, email, password];
-	var params =[id, email, password];
+	var params =[id, email, firstName, lastName, password];
 
 
 	db.run(createUserSql, params, function(err){

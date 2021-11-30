@@ -1,5 +1,3 @@
-// let users = require('../users.json');
-
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcryptjs');
 let databaseFunction = require('../database_functions.js');
@@ -31,7 +29,9 @@ module.exports = function(passport) {
         done(null, false);
       
       var user = {
-        username: row.user_email
+        username: row.user_email,
+        firstName: row.first_name,
+        lastName: row.last_name
       };
 
       return done(null, user);
@@ -39,7 +39,7 @@ module.exports = function(passport) {
   }));
 
   passport.serializeUser(function(user, done) {
-    done(null, user.username);
+    done(null, user.username + " " + user.firstName + " " + user.lastName );
   });
 
   passport.deserializeUser(function(user, done) {
