@@ -21,6 +21,7 @@ var resultErrorRouter = require('./routes/resError');
 var livescoreRouter = require('./routes/score');
 var addToFavRouter = require('./routes/addToFav');
 var getLeagueRouter = require('./routes/getLeague');
+var deleteAccountRouter = require('./routes/deleteAccount');
 
 var app = express();
 var SQLiteStore = require('connect-sqlite3')(session);
@@ -69,6 +70,7 @@ app.use('/resultError', resultErrorRouter);
 app.use('/livescore', livescoreRouter);
 app.use('/addToFav', addToFavRouter);
 app.use('/getLeague', getLeagueRouter);
+app.use('/deleteAccount', deleteAccountRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

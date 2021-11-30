@@ -32,7 +32,7 @@ passport.use(new LocalStrategy({
 ));
 
 passport.serializeUser(function(user, done) {
-	done(null, user.first_name + ' ' + user.last_name); 
+	done(null, user.first_name + ' ' + user.last_name + ' ' + user.email); 
 });
 
 passport.deserializeUser(function(user, done) {

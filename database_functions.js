@@ -76,14 +76,15 @@ let getFavLeagues = (userID) => {
   })
 }
 
-let deleteAccount = (userID) => {
-  var deleteAcc = 'DELETE FROM USER WHERE user_id = ?';
+let deleteAccount = (userEmail) => {
+  var deleteAcc = 'DELETE FROM USER WHERE user_email = ?';
+  var params = userEmail;
 
-  db.run(deleteAcc, userID, function(err) {
+  db.run(deleteAcc, params, function(err) {
     if(err)
       return console.log(err.message);
 
-    console.log("User deleted successfully");
+    console.log(`Row Deleted: ${this.changes}`);
   })
 }
 
