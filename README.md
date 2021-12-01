@@ -7,14 +7,18 @@ FootWiz is a comprehensive dashboard containing all the latest information and s
 As someone who loves the sport, I wanted to create a project that focuses on creating an interactive dashboard with all the information about the leagues and teams I would like as a user. My main aim is to provide information in a concise manner, but also allow the user to dive in and get more detailed information if they would like.
 
 ## Entity Relationship Diagram
-![ERD Diagram](https://github.com/UIC-CS484/assignment-2---final-project-repository-nchawl2/blob/master/ERD.png)
+![ERD Diagram](https://github.com/UIC-CS484/assignment-2---final-project-repository-nchawl2/blob/master/extras/ERD.png)
 
 ## Front-End Data Manipulation
 In this project, the front-end charts and visualizations are implemented through the pre-existing widgets provided by the API that is used in the project. The widgets are used to visualize league tables and will be used to display additional information requested by the user in the future.
 
 ## RESTFul API
+The API used in this project is [API-Football](https://www.api-football.com/). The documentation to the API provides multiple end-point use cases, as well as pre-existing widgets that are implemented in the web application. An API request is made once a user selects an input, after which the data is displayed using the widgets that implement charts.
+
+#### Retrieving team standings for a given league and season
 ![api_1](https://github.com/UIC-CS484/assignment-2---final-project-repository-nchawl2/blob/master/extras/API_1.png)
 
+#### Retrieving all the live match scores from leagues around the world
 ![api_2](https://github.com/UIC-CS484/assignment-2---final-project-repository-nchawl2/blob/master/extras/API_2.png)
 
 ## Testing
