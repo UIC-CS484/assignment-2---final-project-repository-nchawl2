@@ -35,38 +35,49 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Login</h2>
-							<p>Enter your credentials below to login</p>
+							<h2>Live Scores</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
+                <section>
+                  <h4>Date: {{date}}</h4>
 
-                                <section>
-									<form method="post" action="/loginSubmit">
-                                        <div class="row gtr-uniform">
-                                            <div class="col-6 col-12-xsmall">
-                                                <input type="email" name="email" id="email" value="" placeholder="Email" />
-                                            </div>
-											<div class="col-6 col-12-xsmall">
-                                                <input type="password" name="password" id="password" value="" placeholder="Password" />
-                                            </div>
-                                            <div class="col-12">
-                                                <ul class="actions">
-													<li><button class="button primary">Login</button></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-6 col-12-xsmall">
-                                                <ul class="actions stacked">
-                                                    <li>Don't have an account?</li>
-                                                    <li><a href="/createAccount">Create Account</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </form>
+                  <form method="get" action="/livescore">
+                    <div class="col-12">
+                        <ul class="actions">
+                          <li><button>Light Mode</button></li>
+                        </ul>
+                    </div>
+                  </form>
+                  <p></p>
+
+                  <section>
+                    <div id="wg-api-football-fixtures"
+                        data-host="v3.football.api-sports.io"
+                        data-refresh="60"
+                        data-date="2021-07-01"
+                        data-league=""
+                        data-team=""
+                        data-season=""
+                        data-last=""
+                        data-next=""
+                        data-key="918f77748056929b5e2a60ceb6f4ad4e"
+                        data-theme="grey"
+                        data-show-errors="false"
+                        class="api_football_loader">
+                    </div>
+                    <script
+                        type="module"
+                        src="https://widgets.api-sports.io/football/1.1.8/widget.js">
+                    </script>
+                  </section>
 								</section>
-								
 							</div>
+
+              
 						</section>
+
+            
 					</article>
 
 				<!-- Footer -->

@@ -51,6 +51,16 @@
                         </ul>
                     </div>
                   </form>
+
+                  <form method="post" action="/result">
+                    <input type="hidden" name="selected_season" id="selected_season" value={{season}} />
+                    <input type="hidden" name="selected_league" id="selected_league" value={{league}} />
+                    <div class="col-12">
+                        <ul class="actions">
+                          <li><button>Light Mode</button></li>
+                        </ul>
+                    </div>
+                  </form>
                   
                   <p></p>
 
@@ -70,15 +80,6 @@
                       </script>
                     
                   </section>
-                  <form method="post" action="/result">
-                    <input type="hidden" name="selected_season" id="selected_season" value={{season}} />
-                    <input type="hidden" name="selected_league" id="selected_league" value={{league}} />
-                    <div class="col-12">
-                        <ul class="actions">
-                          <li><button>Light Mode</button></li>
-                        </ul>
-                    </div>
-                  </form>
 								</section>
 							</div>
               
