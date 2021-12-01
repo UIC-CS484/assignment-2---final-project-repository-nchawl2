@@ -1,7 +1,7 @@
 # CS 484: Final Project
 
 ## Project Title: FootWiz
-FootWiz is a comprehensive dashboard containing all the latest information and statistics from the top 5 leagues in Europe - Premier League, La Liga, Bundesliga, Serie A, and Ligue 1. Users have the ability to lookup the standings for each league for the past ten seasons, as well as check the live scores from over 880+ football leagues worldwide, in addition to providing the ability to interact with data about match events, lineups, statistics, and so on.
+FootWiz is a comprehensive dashboard containing all the latest information and statistics from the top 5 leagues in Europe - Premier League, La Liga, Bundesliga, Serie A, and Ligue 1. Users have the ability to lookup the standings for each league for the past ten seasons, as well as check the live scores from over 880+ football leagues worldwide, in addition to providing the ability to interact with data about match events, lineups, statistics, and so on\.
 
 ## Motivation
 As someone who loves the sport, I wanted to create a project that focuses on creating an interactive dashboard with all the information about the leagues and teams I would like as a user. My main aim is to provide information in a concise manner, but also allow the user to dive in and get more detailed information if they would like.
