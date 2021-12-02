@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var databaseFunction = require('../database_functions.js');
+var api_key = "918f77748056929b5e2a60ceb6f4ad4e";
 
 router.post('/', (req, res, next) => {
   var config = {
@@ -24,7 +25,7 @@ router.post('/', (req, res, next) => {
     res.render('resultError');
   }
   else 
-    res.render('resultDark', { league: league, season : season });
+    res.render('resultDark', { league: league, season : season, api_key : api_key });
 });
 
 module.exports = router;

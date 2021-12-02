@@ -61,7 +61,10 @@ router.post('/', async function(req, res, next) {
     }
 });
 
+// module.exports = {router, strongPassword};
+
 module.exports = router;
+
 
 //exports.strongPassword = strongPassword;
 //module.exports = {strongPassword};  // tests can't work without this, but it breaks the webapp
